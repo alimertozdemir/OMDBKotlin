@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">OMDBKotlin</string>
+
+    <string name="dialog_action_ok">OK</string>
+    <!--<string name="dialog_action_cancel">Cancel</string>-->
+    <string name="dialog_error_title">Sorry</string>
+
+    <!-- Detail Activity -->
+    <string name="release_date">Release Date: %s</string>
+    <string name="rated">Rated: %s</string>
+    <string name="runtime">Runtime: %s</string>
+    <string name="genre">Genre: %s</string>
+    <string name="director">Director: %s</string>
+    <string name="writer">Writer: %s</string>
+    <string name="actors">Actors: %s</string>
+    <string name="plot">Plot: %s</string>
+    <string name="language">Language: %s</string>
+    <string name="country">Country: %s</string>
+    <string name="awards">Awards: %s</string>
+
+    <!-- Error View -->
+    <string name="error_title">Oops</string>
+    <string name="error_message">There was a problem loading the movies, please try again!</string>
+    <string name="error_reload">Reload</string>
+    <string name="title_activity_maps_sample">Map</string>
+</resources>

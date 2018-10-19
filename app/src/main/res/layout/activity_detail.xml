@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/primary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:collapsedTitleTextAppearance="@color/white"
+            app:expandedTitleTextAppearance="@style/AppBarCollapsed"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.alimert.kotlin.omdb.util.view.SquareImageView
+                android:id="@+id/ivPoster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:theme="@style/AppTheme.ToolbarStyle" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/default_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_horizontal_margin"
+            android:layout_marginRight="@dimen/default_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvReleaseDate"
+                style="@style/MovieDetailText"/>
+
+            <TextView
+                android:id="@+id/tvRated"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvRuntime"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvGenre"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvDirector"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvWriter"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvActors"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvPlot"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvLanguage"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvCountry"
+                style="@style/MovieDetailText" />
+
+            <TextView
+                android:id="@+id/tvAwards"
+                style="@style/MovieDetailText" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.alimert.kotlin.omdb.features.common.ErrorView
+        android:id="@+id/viewError"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</android.support.design.widget.CoordinatorLayout>
